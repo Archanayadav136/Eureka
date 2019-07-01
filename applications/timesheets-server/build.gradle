@@ -1,6 +1,10 @@
 apply from: "$projectDir/../server.gradle"
+apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
 
 dependencies {
     compile project(":components:timesheets")
     compile "io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker"
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:$springSecurityOAuthAutoconfigVersion"
 }
