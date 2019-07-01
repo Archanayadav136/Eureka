@@ -6,6 +6,7 @@ applications:
   memory: 500M
   instances: 1
   env:
+    JAVA_OPTS: '-XX:MaxMetaspaceSize=150M -Xss512k -Xmx200M -XX:ReservedCodeCacheSize=16M -XX:MaxDirectMemorySize=16M'
     JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
   services:
   - tracker-backlog-database
